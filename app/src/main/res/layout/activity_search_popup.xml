@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Popups.search_popup"
+    >
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_bg"
+        android:iconifiedByDefault="false"
+        android:paddingBottom="0dp"
+        android:queryHint="Enter destination"
+        android:visibility="invisible"
+        app:defaultQueryHint="hint3"
+        app:iconifiedByDefault="false"
+        app:queryHint="hint2"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" >
+
+    </SearchView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/search_bar_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="87dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:contentDescription="MARKER_SEARCH_POPUP"
+            android:src="@drawable/map_marker_dark"
+            />
+
+        <TextView
+            android:id="@+id/closestBusStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/abel"
+            android:text="Closest Bus Stop:"
+            android:textSize="20sp"
+            android:typeface="normal" />
+        <TextView
+            android:id="@+id/suggestedRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum"
+            android:textSize="12sp"
+            android:fontFamily="@font/abel"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="530dp"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="153dp"
+        android:background="@drawable/search_result_bg"
+        android:paddingTop="0dp"
+        android:visibility="visible"
+        />
+
+
+</RelativeLayout>

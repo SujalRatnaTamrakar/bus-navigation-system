@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BUS_NAV.iml" filepath="$PROJECT_DIR$/BUS_NAV.iml" group="BUS_NAV" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BUS_NAV/app" />
+    </modules>
+  </component>
+</project>

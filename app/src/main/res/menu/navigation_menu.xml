@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myprofile"
+        android:icon="@drawable/ic_portrait_black_24dp"
+        android:title="My Profile" />
+    <!--<item android:id="@+id/destination"
+        android:icon="@drawable/ic_gps_fixed_black_24dp"
+        android:title="Destination"/>-->
+    <item android:id="@+id/Routes"
+        android:icon="@drawable/ic_directions_bus_black_24dp"
+        android:title="Routes"/>
+    <item android:id="@+id/settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings"/>
+    <item android:id="@+id/logout"
+        android:icon="@drawable/ic_cancel_black_24dp"
+        android:title="Logout"/>
+
+
+</menu>

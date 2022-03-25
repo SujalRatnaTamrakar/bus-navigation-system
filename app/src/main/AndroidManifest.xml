@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.project.of.busnavigationsystem">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Bus Navigation System"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+
+        <!--Login -->
+        <activity android:name=".Login.LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/HiddenTitleTheme"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".Login.LoginSplashScreen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Main Activities-->
+        <activity android:name=".MainActivities.MainActivityy"
+            android:configChanges="orientation"
+            android:theme="@style/AppThemeWithActionBar"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivities.MainActivityy_driver"
+            android:configChanges="orientation"
+            android:theme="@style/AppThemeWithActionBar"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivities.Choose.ChooseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeCardView"/>
+
+        <!--NavBar-->
+        <activity android:name=".NavBar.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppThemeWithActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+            <!--Profile-->
+            <activity android:name=".NavBar.Profile.readdriver"
+            android:configChanges="orientation"
+            android:label="My Profile"
+            android:theme="@style/AppThemeWithActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+            <activity android:name=".NavBar.Profile.readuser"
+            android:configChanges="orientation"
+            android:label="My Profile"
+            android:theme="@style/AppThemeWithActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+            <!--Routes-->
+            <activity android:name=".NavBar.Routes.BusListActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_bus_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+            <activity android:name=".NavBar.Routes.BusDetailActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_bus_detail"
+            android:parentActivityName=".NavBar.Routes.BusListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.of.busnavigationsystem.NavBar.Routes.BusListActivity" />
+        </activity>
+
+        <!--PopUps-->
+        <activity android:name=".Popups.search_popup"
+            android:theme="@style/AppTheme.search_pop" />
+        <activity android:name=".Popups.route_detail_popup"
+            android:theme="@style/AppTheme.PopMe" />
+
+        <!--SignUp-->
+        <activity android:name=".Signup.SignUpBus"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeSignUp"/>
+        <activity android:name=".Signup.SignUpUser"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeSignUp"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

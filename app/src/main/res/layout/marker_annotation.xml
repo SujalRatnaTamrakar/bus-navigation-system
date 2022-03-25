@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-50dp"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    >
+
+    <com.google.android.material.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="false"
+        android:id="@+id/markerAnnotation"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="1dp"
+        android:theme="@style/Theme.MaterialComponents.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/ic_marker_annotation" />
+
+            <TextView
+                android:id="@+id/busStopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/black_semi_transparent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Location Name" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/markerAnnotation"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-7dp"
+        android:layout_marginBottom="0dp"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/img_annotation_point" />
+</RelativeLayout>
